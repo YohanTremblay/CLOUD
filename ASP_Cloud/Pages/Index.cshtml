@@ -1,0 +1,99 @@
+﻿@page
+@using Microsoft.Azure.Cosmos
+@model ProductsPageModel
+
+@{
+    // Récupérer les éléments de la dernière heure et les trier par date
+    List<Product> produitsDerniereHeure = (Model.Products ?? Enumerable.Empty<Product>())
+                                    .Where(p => IsInLastHour(p.Date))
+                                    .OrderBy(p => DateTime.ParseExact(p.Date, "yyyy'-'MM'-'dd'T'HH':'mm':'ss", null))
+                                    .ToList();
+
+    // Vérifier la séquence P01, P02, P03
+    bool sequenceCorrect = CheckSequence(produitsDerniereHeure);
+}
+
+<!-- Reste du code inchangé -->
+
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">codeProtocole</th>
+            <th scope="col">Date</th>
+            <th scope="col">Éxécuter</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+
+        @foreach (Product item in produitsDerniereHeure)
+        {
+            <tr>
+                <th scope="row">
+                    @item.id
+                </th>
+                <td>
+                    @item.codeProtocole
+                </td>
+                <td>
+                    @item.Date
+                </td>
+                <td>
+                    @if (sequenceCorrect)
+                    {
+                        <span>check</span>
+                    }
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+@if (!sequenceCorrect)
+{
+    <button disabled>Autoriser P04</button>
+}
+else
+{
+    <button onclick="redirigerPage()">Autoriser P04</button>
+}
+
+<script>
+    function redirigerPage() {
+        // Redirigez vers la page "AutoriserP04"
+        window.location.href = '/AutoriserP04'; // Assurez-vous que le chemin est correct
+    }
+</script>
+
+@functions {
+    private bool CheckSequence(List<Product> produits)
+    {
+        List<string> codesAttendus = new List<string> { "P01", "P02", "P03" };
+
+        // Vérifier la présence de chaque code attendu dans la liste des produits
+        foreach (string codeAttendu in codesAttendus)
+        {
+            bool codePresent = produits.Any(p => p.codeProtocole == codeAttendu);
+
+            if (!codePresent)
+            {
+                // Si le code attendu n'est pas présent, la séquence est incorrecte
+                return false;
+            }
+        }
+
+        // Si on sort de la boucle, tous les codes attendus sont présents, la séquence est correcte
+        return true;
+    }
+
+    // Méthode pour vérifier si la date est dans la dernière heure
+    private bool IsInLastHour(string dateString)
+    {
+        DateTime maintenant = DateTime.Now;
+        DateTime dateProduit = DateTime.ParseExact(dateString, "yyyy'-'MM'-'dd'T'HH':'mm':'ss", null);
+        TimeSpan difference = maintenant - dateProduit;
+
+        return difference.TotalHours <= 1;
+    }
+}

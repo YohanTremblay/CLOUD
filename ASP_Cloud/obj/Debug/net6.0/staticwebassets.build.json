@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "wa5EcAaKrjB7/xUJmJYj8aPO/I+plAi0/CaGrzVuQd0=",
+  "Source": "ASP_Cloud",
+  "BasePath": "_content/ASP_Cloud",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ASP_Cloud\\wwwroot",
+      "Source": "ASP_Cloud",
+      "ContentRoot": "C:\\Users\\2132535\\Documents\\Code\\Cloud\\ASP_Cloud\\wwwroot\\",
+      "BasePath": "_content/ASP_Cloud",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\2132535\\Documents\\Code\\Cloud\\ASP_Cloud\\wwwroot\\favicon.ico",
+      "SourceId": "ASP_Cloud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\2132535\\Documents\\Code\\Cloud\\ASP_Cloud\\wwwroot\\",
+      "BasePath": "_content/ASP_Cloud",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\2132535\\Documents\\Code\\Cloud\\ASP_Cloud\\wwwroot\\icon.png",
+      "SourceId": "ASP_Cloud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\2132535\\Documents\\Code\\Cloud\\ASP_Cloud\\wwwroot\\",
+      "BasePath": "_content/ASP_Cloud",
+      "RelativePath": "icon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\icon.png"
+    }
+  ]
+}

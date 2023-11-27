@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\2132535\\Documents\\Code\\Cloud\\ASP_Cloud\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\2132535\\Documents\\Code\\Cloud\\ASP_Cloud\\wwwroot\\icon.png",
+      "PackagePath": "staticwebassets\\icon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ASP_Cloud.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ASP_Cloud.props",
+      "PackagePath": "build\\ASP_Cloud.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ASP_Cloud.props",
+      "PackagePath": "buildMultiTargeting\\ASP_Cloud.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ASP_Cloud.props",
+      "PackagePath": "buildTransitive\\ASP_Cloud.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
