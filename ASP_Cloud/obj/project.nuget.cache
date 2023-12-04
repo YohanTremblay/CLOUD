@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "plpmuvf6X3WIx02zKaVoTK8oKTDcvTyWAzusiefoMbVYnzLr5j9UqrLO1ePrcjT1KwklJ74DyGMtwAf17ZIdeA==",
+  "dgSpecHash": "Q2AbsPwYVeMD950LlCNLqQe5xv3RtsP73kE6SHX6SQ2sMs1TDMOV9pirvN6BFSVnYTfP8J4jdZKxZseRRgQxCw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\2132535\\Documents\\Code\\Cloud\\ASP_Cloud\\ASP_Cloud.csproj",
+  "projectFilePath": "C:\\Users\\2132535\\Documents\\Code\\Cloud\\GIT_Cloud\\CLOUD\\ASP_Cloud\\ASP_Cloud.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\2132535\\.nuget\\packages\\azure.core\\1.19.0\\azure.core.1.19.0.nupkg.sha512",
     "C:\\Users\\2132535\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
