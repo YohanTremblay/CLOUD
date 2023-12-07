@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "D16IcHeeDkrkBzRjsyrMdji9j2e6PlYZWgdr77XiHDApa8opLQKmanY70OLbke8ZcTU8Ri12/jl0eF9tU0IibQ==",
+  "dgSpecHash": "vOga0Ri+QjXlzz8kvVrppJ40mMzcXhajXZO7q0xIHF6K2YzazI4KHHSkqcW9q6Bsbes8bPFdAri2975AnnSfmA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\2131801\\Documents\\Code\\Cloud\\Baldurs_slave\\MQTT_Project\\MQTT_Project.csproj",
+  "projectFilePath": "C:\\Users\\2132535\\Documents\\Code\\Cloud\\GIT_Cloud\\CLOUD\\Controlleur\\MQTT_Project\\MQTT_Project.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\2131801\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
-    "C:\\Users\\2131801\\.nuget\\packages\\mqttnet\\4.2.1.781\\mqttnet.4.2.1.781.nupkg.sha512",
-    "C:\\Users\\2131801\\.nuget\\packages\\mqttnet.aspnetcore\\4.2.1.781\\mqttnet.aspnetcore.4.2.1.781.nupkg.sha512",
-    "C:\\Users\\2131801\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
-    "C:\\Users\\2131801\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
-    "C:\\Users\\2131801\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
-    "C:\\Users\\2131801\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
-    "C:\\Users\\2131801\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
+    "C:\\Users\\2132535\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\2132535\\.nuget\\packages\\mqttnet\\4.2.1.781\\mqttnet.4.2.1.781.nupkg.sha512",
+    "C:\\Users\\2132535\\.nuget\\packages\\mqttnet.aspnetcore\\4.2.1.781\\mqttnet.aspnetcore.4.2.1.781.nupkg.sha512",
+    "C:\\Users\\2132535\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
+    "C:\\Users\\2132535\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\2132535\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
+    "C:\\Users\\2132535\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
+    "C:\\Users\\2132535\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
