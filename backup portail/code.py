@@ -46,6 +46,7 @@ esp = adafruit_esp32spi.ESP_SPIcontrol(spi, esp32_cs, esp32_ready, esp32_reset)
 # ================================= #
 status_light = neopixel.NeoPixel(board.NEOPIXEL, 1, brightness=0.2)
 
+
 # ================================= #
 #                WIFI
 # ================================= #
@@ -103,6 +104,7 @@ def connected(client, userdata, flags, rc):
     interface.setMQTT_ok()
     print("Serveur:\t%s" % secrets["mqtt_broker"])
     print("\nAbonnement au topic...")
+
     mqtt_client.subscribe(TOPIC_MODULE)
     print("\nLe portail est fonctionnel...")
     mqtt_client.publish(TOPIC_PORTAIL, "Disponible")
@@ -120,6 +122,8 @@ def publish(mqtt_client, userdata, topic, pid):
     print("Message publié sur {0} avec PID {1}".format(topic, pid))
 
 def message(client, topic, message):
+    #interface.afficher("TOPIC   "+str(topic))
+    #interface.afficher("MESSAGE "+str(message))
     info = Information(client, topic, message)
     info.afficher()
     interface.afficher(info.affichage)
@@ -141,13 +145,10 @@ mqtt_client.connect()
 # ================================= #
 
 while True:
-    #try:
-    mqtt_client.loop()
-    #except:
-    # Reboot, incapable de gérer la reconnexion à MQTT autrement
-    #supervisor.reload()
-    
-    time.sleep(0.1)
-
+    try:
+        mqtt_client.loop()
+    except:
+            # Reboot, incapable de gérer la reconnexion à MQTT autrement
+        supervisor.reload()
     
     time.sleep(0.1)

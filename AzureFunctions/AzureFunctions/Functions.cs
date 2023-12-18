@@ -1,6 +1,8 @@
+using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
+using System.ComponentModel;
 using System.Net;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -28,10 +30,9 @@ namespace AzureFunctions
 
             var response = req.CreateResponse();
 
-            var rmdId = new Random();
-            string protocole = req.Query["protocole"];
-            string date = DateTime.Now.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss");
-            string id = Convert.ToString(rmdId.Next(1, 700));
+            string protocole = req.Query["codeProtocole"];
+            string date = DateTime.UtcNow.ToString();
+            string id = await GetID(protocole, "POST");
 
             await response.WriteAsJsonAsync(new
             {
@@ -42,7 +43,6 @@ namespace AzureFunctions
 
             if (response.StatusCode == HttpStatusCode.OK)
             {
-                
                 Proto proto = new Proto
                 {
                     codeProtocole = protocole,
@@ -67,8 +67,8 @@ namespace AzureFunctions
 
             var response = req.CreateResponse(HttpStatusCode.OK);
 
-            string protocole = req.Query["protocole"];
-            string id = req.Query["id"];
+            string protocole = req.Query["codeProtocole"];
+            string id = await GetID(protocole, "GET");
 
             var retrievedItem = await database.GetItemAsync<Proto>(id, protocole);
 
@@ -80,5 +80,35 @@ namespace AzureFunctions
 
             return response;
         }
+
+        private async Task<string> GetID(string codeProtocole, string status)
+        {
+            var container = database.CosmosClient.GetContainer(database.IdDatabase, database.IdContainer);
+
+            // Exécutez une requête pour récupérer tous les documents avec le protocole spécifié
+            var query = new QueryDefinition($"SELECT * FROM c WHERE c.codeProtocole = @codeProtocole")
+                .WithParameter("@codeProtocole", codeProtocole);
+
+            var iterator = container.GetItemQueryIterator<Proto>(query);
+            var maxId = 0;
+
+            while (iterator.HasMoreResults)
+            {
+                var response = await iterator.ReadNextAsync();
+                foreach (var item in response)
+                {
+                    // Parsez l'ID du document et mettez à jour maxId si l'ID est plus grand
+                    if (int.TryParse(item.id, out var currentId) && currentId > maxId)
+                    {
+                        maxId = currentId;
+                    }
+                }
+            }
+
+            if (status == "GET")
+                return maxId.ToString();
+            return (maxId + 1).ToString();
+        }
+
     }
 }

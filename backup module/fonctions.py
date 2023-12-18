@@ -1,30 +1,40 @@
 from random import random
 from time import time
-from constantes import P01, TOPIC_MODULE
+from constantes import P01, TOPIC_MODULE, SON_DEMARRAGE, SON_ENCOURS, SON_FERMETURE
 from panneau import Panneau
 from information import Information
 import json
 import time
 import random
 
-
+# Protocole 01
 def protocole_01(panneau: Panneau, information: Information):
-    jsonPublish("Début P01", "max", information)
-    nb = 0
-    while nb<3:
+    # 1. Initialisation
+    jsonPublish("Début P01", SON_DEMARRAGE, information)
+    nb = 1
+
+    # 2. Test button pressed
+    while nb<4:
         panneau.scan()
         if (panneau.getChangementBouton("btnA") == True) :
             panneau.setBtnLed_On("ledA")
-            jsonPublish("Boutton Appuyé","hub", information)
+            jsonPublish("Boutton Appuyé",SON_ENCOURS, information)
         elif (panneau.getChangementBouton("btnA") == False) :
             panneau.setBtnLed_Off("ledA") 
             jsonPublish("Boutton Relâché", "", information)
-            nb+=1    
-        print(str(nb))
-    jsonPublish("Fin P01","cheer" ,information)
+            panneau.setRGBLed(nb, (0,255,0))
+            nb+=1
 
+
+    # 3. Fin protocole
+    jsonPublish("Fin P01", SON_FERMETURE, information)
+
+# Protocole 02
 def protocole_02(panneau: Panneau, information: Information):
-    jsonPublish("Début P02", "max", information)
+    # 1. Initialisation
+    jsonPublish("Début P02", SON_DEMARRAGE, information)
+    
+    # Allumage led fusee
     panneau.scan()
     for x in range(20):
         panneau.setRGBLed(x, (0,0,0))
@@ -32,47 +42,60 @@ def protocole_02(panneau: Panneau, information: Information):
     nbLed = 4
     while nbLed <= 6 :
         panneau.setRGBLed(nbLed, (255,0,0))
-        jsonPublish("Lumière " + str(nbLed) + " allumé","test" ,information)
+        jsonPublish("Lumière " + str(nbLed) + " allumé", SON_ENCOURS, information)
         nbLed+=1
+
+    # Switch 1
     while (panneau.getChangementSwitch("switchA") != True) :
         panneau.scan()
     panneau.setRGBLed(4, (0,128,0))
-    jsonPublish("Switch 4 Activée","test" ,information)
+    jsonPublish("Switch 4 Activée",SON_ENCOURS ,information)
     panneau.setRGBLed(8, (255,0,0))
-    time.sleep(10)
+    time.sleep(5)
     panneau.setRGBLed(8, (0,128,0))
-    jsonPublish("Led 8 Allumé","hub" ,information)
+    jsonPublish("Led 8 Allumé",SON_ENCOURS ,information)
 
+    # Switch 2
     while (panneau.getChangementSwitch("switchB") != True) :
         panneau.scan()
     panneau.setRGBLed(5, (0,128,0))
-    jsonPublish("Switch 5 Activée","test" ,information)
+    jsonPublish("Switch 5 Activée",SON_ENCOURS ,information)
     panneau.setRGBLed(9, (255,0,0))
-    time.sleep(10)
+    time.sleep(5)
     panneau.setRGBLed(9, (0,128,0))
-    jsonPublish("Led 9 Allumé","hub" ,information)
+    jsonPublish("Led 9 Allumé",SON_ENCOURS ,information)
 
+    # Switch 3
     while (panneau.getChangementSwitch("switchC") != True) :
         panneau.scan()
     panneau.setRGBLed(6, (0,128,0))
-    jsonPublish("Switch 6 Activée","test" ,information)
+    jsonPublish("Switch 6 Activée",SON_ENCOURS ,information)
     panneau.setRGBLed(10, (255,0,0))
-    time.sleep(10)
+    time.sleep(5)
     panneau.setRGBLed(10, (0,128,0))
-    jsonPublish("Led 10 Allumé","hub" ,information)
+    jsonPublish("Led 10 Allumé",SON_ENCOURS ,information)
 
+    # Publication etat
     panneau.setBtnLed_On("ledD")
-    jsonPublish("Alert","alarm_beep" ,information)
+    jsonPublish("Alert",SON_ENCOURS ,information)
 
+    # Danger button
     while (panneau.getChangementBouton("btnD") != True) :
         panneau.scan()
     panneau.setRGBLed(7, (0,128,0))
-    jsonPublish("Désactivation du Danger","buzzer" ,information)
+    jsonPublish("Désactivation du Danger",SON_ENCOURS ,information)
 
-    jsonPublish("Fin P02","cheering" ,information)
+    panneau.setRGBLed(11, (255,0,0))
+    time.sleep(5)
+    panneau.setRGBLed(11, (0,128,0))
 
+    # 3. Fin protocole
+    jsonPublish("Fin P02", SON_FERMETURE, information)
+
+# Protocole 03
 def protocole_03(panneau: Panneau, information: Information) :
-    jsonPublish("Début P03", "blue", information)
+    # Initialisation
+    jsonPublish("Début P03", SON_DEMARRAGE, information)
     panneau.scan()
     for x in range(20):
         panneau.setRGBLed(x, (0,0,0))
@@ -82,6 +105,8 @@ def protocole_03(panneau: Panneau, information: Information) :
     jauge = 0
     panneau.setJauge(jauge)
     color = 0
+
+    # Roulette
     while nb<=3:
         stop = False
         panneau.scan()
@@ -133,10 +158,15 @@ def protocole_03(panneau: Panneau, information: Information) :
                 panneau.setRGBLed(nb, (jauge+50,0,0))
             nb=nb+1
 
+    # 3. Fin protocole
+    jsonPublish("Fin P03", SON_FERMETURE, information)
+
+
+
 
 def jsonPublish(affichage, son, information : Information ):
     send_msg = {
         'affichage' : affichage,
         'son'       : son
     }
-    information.client.publish(TOPIC_MODULE + "/" + information.code, json.dumps(send_msg))
+    information.client.publish(TOPIC_MODULE + information.code, json.dumps(send_msg))

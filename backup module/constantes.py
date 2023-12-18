@@ -2,7 +2,7 @@
 
 # Projet
 PROJET = "CLOUD"
-FUSEE = "TEST"
+FUSEE = "BIGL"
 CONTROLEUR = "CONTROLLER"
 MODULE = "MODULE"
 PORTAIL = "PORTAIL"
@@ -24,7 +24,6 @@ MESSAGE_FIN_PROTOCOLE = "Fin du protocole"
 # Les topics MQTT (exemples)
 MQTT_TOPIC = PROJET + "/" + FUSEE
 MQTT_TOPIC_MODULE_STATUT = MQTT_TOPIC + "/" + MODULE + "/" + OPERATION_STATUT
-
 
 #Les fonctions (IMPORTANT)
 P01 = "protocole_01"

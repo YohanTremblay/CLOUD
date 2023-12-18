@@ -38,7 +38,7 @@ public class MonService : ServiceBase
 
         await _mqttClient.ConnectAsync(options);
 
-        await client.SubscribeAsync(new MqttTopicFilterBuilder().WithTopic("CLOUD/ASGARD/MODULE/STATUT/CODE").Build());
+        await client.SubscribeAsync(new MqttTopicFilterBuilder().WithTopic("CLOUD/BALDURS_SLAVE/MODULE/STATUT/CODE").Build());
 
         client.ApplicationMessageReceivedAsync += async e =>
         {
@@ -50,11 +50,11 @@ public class MonService : ServiceBase
             {
                 SendPost("P01");
             }
-            else if(Encoding.UTF8.GetString(e.ApplicationMessage.Payload) == "Protocole 2 terminé")
+            else if(Encoding.UTF8.GetString(e.ApplicationMessage.Payload) == "Fin P02")
             {
                 SendPost("P02");
             }
-            else if (Encoding.UTF8.GetString(e.ApplicationMessage.Payload) == "Protocole 3 terminé")
+            else if (Encoding.UTF8.GetString(e.ApplicationMessage.Payload) == "Fin P03")
             {
                 SendPost("P03");
             }
@@ -101,7 +101,7 @@ public class MonService : ServiceBase
         string protocoleValue = text;
 
         // Construction de la chaîne de requête (si nécessaire)
-        string queryString = $"?protocole={Uri.EscapeDataString(protocoleValue)}";
+        string queryString = $"?codeProtocole={Uri.EscapeDataString(protocoleValue)}";
 
         // Contenu de la requête (peut être vide dans ce cas)
         string postData = string.Empty;

@@ -69,14 +69,12 @@ def message(client, topic, message):
     traiter_information(info)
 
 def demarrage():
-    # TODO : PUBLICATION de MESSAGE_DEMARRAGE_MODULE
     send_msg = {
         'affichage' : "Disponible"
     }
     mqtt_client.publish(TOPIC_MODULE, json.dumps(send_msg))
 
 def fermeture():
-    # TODO : PUBLICATION de MESSAGE_FERMETURE_MODULE
     send_msg = {
         'affichage' : "Indisponible"
     }
