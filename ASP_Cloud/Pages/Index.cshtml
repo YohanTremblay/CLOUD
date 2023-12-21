@@ -6,7 +6,7 @@
     // Récupérer les éléments de la dernière heure et les trier par date
     List<Product> produitsDerniereHeure = (Model.Products ?? Enumerable.Empty<Product>())
                                     .Where(p => IsInLastHour(p.Date))
-                                    .OrderBy(p => DateTime.ParseExact(p.Date, "yyyy'-'MM'-'dd'T'HH':'mm':'ss", null))
+                                    .OrderBy(p => DateTime.UtcNow.ToString())
                                     .ToList();
 
     // Vérifier la séquence P01, P02, P03
@@ -91,7 +91,7 @@ else
     private bool IsInLastHour(string dateString)
     {
         DateTime maintenant = DateTime.Now;
-        DateTime dateProduit = DateTime.ParseExact(dateString, "yyyy'-'MM'-'dd'T'HH':'mm':'ss", null);
+        DateTime dateProduit = DateTime.Parse(dateString);
         TimeSpan difference = maintenant - dateProduit;
 
         return difference.TotalHours <= 1;

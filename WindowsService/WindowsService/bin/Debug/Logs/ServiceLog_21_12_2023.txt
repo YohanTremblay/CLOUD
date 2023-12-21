@@ -1,0 +1,256 @@
+1. Service Start
+2. Try to connected to the MQTTSERVER
+MQTTnet.Client.MqttClientConnectResult
+3. Connected
+4. Subscribed to module statut
+1. Service Start
+2. Try to connected to the MQTTSERVER
+MQTTnet.Client.MqttClientConnectResult
+3. Connected
+4. Subscribed to module statut
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "boom", "affichage": "Début P01"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "buzzer", "affichage": "Boutton Appuyé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "", "affichage": "Boutton Relâché"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "buzzer", "affichage": "Boutton Appuyé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "", "affichage": "Boutton Relâché"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "buzzer", "affichage": "Boutton Appuyé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "", "affichage": "Boutton Relâché"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "cheering", "affichage": "Fin P01"}
+1. Service Start
+2. Try to connected to the MQTTSERVER
+MQTTnet.Client.MqttClientConnectResult
+3. Connected
+4. Subscribed to module statut
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "boom", "affichage": "Début P01"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "buzzer", "affichage": "Boutton Appuyé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "", "affichage": "Boutton Relâché"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "buzzer", "affichage": "Boutton Appuyé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "", "affichage": "Boutton Relâché"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "buzzer", "affichage": "Boutton Appuyé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "", "affichage": "Boutton Relâché"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "cheering", "affichage": "Fin P01"}
+P01
+https://azurefonctionyohanguillaume.azurewebsites.net/api/POST_Protocole?protocole=P01
+Réponse du serveur : {"Protocole":null,"Date":"12/21/2023 2:26:08 PM","Id":"1"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/
+Contenu du message : {"affichage": "Disponible"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/
+Contenu du message : {"affichage": "Disponible"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/
+Contenu du message : {"affichage": "Disponible"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/
+Contenu du message : {"affichage": "Disponible"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/
+Contenu du message : {"affichage": "Disponible"}
+1. Service Start
+2. Try to connected to the MQTTSERVER
+MQTTnet.Client.MqttClientConnectResult
+3. Connected
+4. Subscribed to module statut
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/
+Contenu du message : {"affichage": "Disponible"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "boom", "affichage": "Début P01"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "buzzer", "affichage": "Boutton Appuyé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "", "affichage": "Boutton Relâché"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "buzzer", "affichage": "Boutton Appuyé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "", "affichage": "Boutton Relâché"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "buzzer", "affichage": "Boutton Appuyé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "", "affichage": "Boutton Relâché"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "cheering", "affichage": "Fin P01"}
+P01
+https://azurefonctionyohanguillaume.azurewebsites.net/api/POST_Protocole?codeProtocole=P01
+Réponse du serveur : {"Protocole":"P01","Date":"12/21/2023 2:50:56 PM","Id":"2"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "boom", "affichage": "Début P02"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Lumière 4 allumé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Lumière 5 allumé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Lumière 6 allumé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Switch 4 Activée"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Led 8 Allumé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Switch 5 Activée"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Led 9 Allumé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Switch 6 Activée"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Led 10 Allumé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Alert"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Désactivation du Danger"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "cheering", "affichage": "Fin P02"}
+P02
+https://azurefonctionyohanguillaume.azurewebsites.net/api/POST_Protocole?codeProtocole=P02
+Réponse du serveur : {"Protocole":"P02","Date":"12/21/2023 2:54:36 PM","Id":"3"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P03
+Contenu du message : {"son": "boom", "affichage": "Début P03"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P03
+Contenu du message : {"son": "cheering", "affichage": "Fin P03"}
+P03
+https://azurefonctionyohanguillaume.azurewebsites.net/api/POST_Protocole?codeProtocole=P03
+Réponse du serveur : {"Protocole":"P03","Date":"12/21/2023 2:55:14 PM","Id":"4"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/
+Contenu du message : {"affichage": "Disponible"}
+1. Service Start
+2. Try to connected to the MQTTSERVER
+MQTTnet.Client.MqttClientConnectResult
+3. Connected
+4. Subscribed to module statut
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/
+Contenu du message : {"affichage": "Disponible"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "boom", "affichage": "Début P01"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "buzzer", "affichage": "Boutton Appuyé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "", "affichage": "Boutton Relâché"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "buzzer", "affichage": "Boutton Appuyé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "", "affichage": "Boutton Relâché"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "buzzer", "affichage": "Boutton Appuyé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "", "affichage": "Boutton Relâché"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P01
+Contenu du message : {"son": "cheering", "affichage": "Fin P01"}
+P01
+https://azurefonctionyohanguillaume.azurewebsites.net/api/POST_Protocole?codeProtocole=P01
+Réponse du serveur : {"Protocole":"P01","Date":"12/21/2023 3:13:32 PM","Id":"1"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "boom", "affichage": "Début P02"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Lumière 4 allumé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Lumière 5 allumé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Lumière 6 allumé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Switch 4 Activée"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Led 8 Allumé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Switch 5 Activée"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Led 9 Allumé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Switch 6 Activée"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Led 10 Allumé"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Alert"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "buzzer", "affichage": "Désactivation du Danger"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P02
+Contenu du message : {"son": "cheering", "affichage": "Fin P02"}
+P02
+https://azurefonctionyohanguillaume.azurewebsites.net/api/POST_Protocole?codeProtocole=P02
+Réponse du serveur : {"Protocole":"P02","Date":"12/21/2023 3:14:16 PM","Id":"2"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P03
+Contenu du message : {"son": "boom", "affichage": "Début P03"}
+RECEIVE MESSAGE
+Message reçu sur le topic : CLOUD/BALDURS_SLAVE/MODULE/STATUT/P03
+Contenu du message : {"son": "cheering", "affichage": "Fin P03"}
+P03
+https://azurefonctionyohanguillaume.azurewebsites.net/api/POST_Protocole?codeProtocole=P03
+Réponse du serveur : {"Protocole":"P03","Date":"12/21/2023 3:15:01 PM","Id":"3"}

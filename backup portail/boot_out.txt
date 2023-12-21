@@ -1,2 +1,2 @@
-Adafruit CircuitPython 7.3.3 on 2022-08-29; Adafruit PyPortal Titano with samd51j20
+Adafruit CircuitPython 7.3.2 on 2022-07-20; Adafruit PyPortal Titano with samd51j20
 Board ID:pyportal_titano

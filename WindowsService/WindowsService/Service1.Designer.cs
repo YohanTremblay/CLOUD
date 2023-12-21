@@ -1,18 +1,16 @@
-﻿using System.ServiceProcess;
-
-namespace WindowsService
+﻿namespace WindowsService
 {
-    partial class Service1 : ServiceBase
+    partial class Service1
     {
         /// <summary> 
-        /// Variable nécessaire au concepteur.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Nettoyage des ressources utilisées.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,16 +20,16 @@ namespace WindowsService
             base.Dispose(disposing);
         }
 
-        #region Code généré par le Concepteur de composants
+        #region Component Designer generated code
 
         /// <summary> 
-        /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
-        /// le contenu de cette méthode avec l'éditeur de code.
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.ServiceName = "CLOUD_SERVICE";
+            this.ServiceName = "Service1";
         }
 
         #endregion

@@ -32,6 +32,7 @@ namespace AzureFunctions
 
             string protocole = req.Query["codeProtocole"];
             string date = DateTime.UtcNow.ToString();
+
             string id = await GetID(protocole, "POST");
 
             await response.WriteAsJsonAsync(new
@@ -86,7 +87,7 @@ namespace AzureFunctions
             var container = database.CosmosClient.GetContainer(database.IdDatabase, database.IdContainer);
 
             // Exécutez une requête pour récupérer tous les documents avec le protocole spécifié
-            var query = new QueryDefinition($"SELECT * FROM c WHERE c.codeProtocole = @codeProtocole")
+            var query = new QueryDefinition($"SELECT * FROM c")
                 .WithParameter("@codeProtocole", codeProtocole);
 
             var iterator = container.GetItemQueryIterator<Proto>(query);
